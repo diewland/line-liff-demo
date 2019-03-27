@@ -34,13 +34,15 @@
 
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script>
+
+      // init liff
       window.onload = function (e) {
         liff.init(function (data) {
           initializeApp(data);
         });
       };
         
-      // update profile
+      // init function
       function initializeApp(data){
         liff.getProfile().then(function (profile) {
           $('img')[0].src = profile.pictureUrl;

@@ -19,6 +19,7 @@
       </div>
 
       <canvas style='width: 100%;'></canvas>
+      <input class='btn btn-primary' type='button' value='Open in new window'>
 
     </div>
 
@@ -34,6 +35,27 @@
     <script src='https://diewland.github.io/pico.green.js/pico.green.js'></script>
     <script>
       var myCamvas = new PicoGreen();
+    </script>
+
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script>
+
+      // init liff
+      window.onload = function (e) {
+        liff.init(function (data) {
+          initializeApp(data);
+        });
+      };
+        
+      // init function
+      function initializeApp(data){
+        $('.btn').click(function(){
+          liff.openWindow({
+            url: 'https://diewland.github.io/line-liff-demo/face.html'
+          });
+        });
+      }
+
     </script>
   </body>
 </html>
