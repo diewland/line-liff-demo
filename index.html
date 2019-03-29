@@ -18,6 +18,8 @@
         <img class='avatar img-fluid' src='https://pbs.twimg.com/profile_images/1085599435835375617/CbmxAalf_400x400.jpg'>
         <h4 class='displayname'>...</h4>
         <span class='status'>...</span>
+        <hr>
+        <span class='userid'>...</span>
       </div>
       <hr>
       <div class='uagent'></div>
@@ -47,6 +49,7 @@
           $('img')[0].src = profile.pictureUrl;
           $('.displayname').html(profile.displayName);
           $('.status').html(profile.statusMessage);
+          $('.userid').html(profile.userId);
         }).catch(function (error) {
           window.alert("Error getting profile: " + error);
         });
