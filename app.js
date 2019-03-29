@@ -1,5 +1,12 @@
+// gen menu
+let menus = [
+  [ 'Home', 'index.html' ],
+  [ 'Face', 'face.html' ],
+];
+$('.menu').html(menus.map((m) => `<a href='${m[1]}'>${m[0]}</a>`).join(' | '));
+
 // prevent link cache
-$('a').each((idx, o) => {
+$('a').each((i, o) => {
   o.href += '?t=' + (+ new Date());
 });
 
