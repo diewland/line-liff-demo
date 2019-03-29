@@ -12,3 +12,8 @@ $('a').each((i, o) => {
 
 // show useragent
 $('.uagent').html(navigator.userAgent);
+
+// play localStorage
+let view = +localStorage.getItem('view');
+localStorage.setItem('view', ++view);
+$('.view').html(view);
