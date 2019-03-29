@@ -14,6 +14,7 @@ $('a').each((i, o) => {
 $('.uagent').html(navigator.userAgent);
 
 // play localStorage
+// TODO may be remove in the future
 let view = +localStorage.getItem('view');
 localStorage.setItem('view', ++view);
 $('.view').html(view);
